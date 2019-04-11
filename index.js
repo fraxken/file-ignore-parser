@@ -5,10 +5,11 @@ const { readFile } = require("fs").promises;
  * @async
  * @generator
  * @func parseIgnoreFile
+ * @desc Parse .npmignore or .gitignore file and return each lines as a Set
  * @param {!String} location file location
  * @returns {Promise<Set<String>>}
  *
- * @throws {TypeError}
+ * @throws {TypeError} location must be a string
  */
 async function parseIgnoreFile(location) {
     if (typeof location !== "string") {
