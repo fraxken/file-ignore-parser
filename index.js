@@ -13,12 +13,7 @@ const { readFile } = require("fs").promises;
  * @throws {TypeError} location must be a string
  */
 async function parseIgnoreFile(location) {
-    const locationStr = String(location);
-    if (Number.isNaN(locationStr)) {
-        throw new TypeError("location must be a string");
-    }
-
-    const str = await readFile(locationStr, { encoding: "utf8" });
+    const str = await readFile(location, { encoding: "utf8" });
     const lines = str.split(/\r?\n/).filter((line) => line.trim() !== "" && line.charAt(0) !== "#");
 
     return new Set(lines);

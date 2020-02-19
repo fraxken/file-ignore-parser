@@ -1,3 +1,5 @@
+"use strict";
+
 // Require Node.js Dependencies
 const { join } = require("path");
 
@@ -15,12 +17,5 @@ avaTest("Export must be an Asynchronous method", (assert) => {
 avaTest("Parse .testfile and check deep content", async(assert) => {
     const ret = await parser(join(__dirname, ".testfile"));
     assert.true(is.set(ret));
-    assert.deepEqual([...ret], ["/hello", "mdr.js", "yo.js"]);
-});
-
-avaTest("location must be a string", async(assert) => {
-    await assert.throwsAsync(parser(10), {
-        instanceOf: TypeError,
-        message: "location must be a string"
-    });
+    assert.deepEqual([...ret].sort(), ["/hello", "mdr.js", "yo.js"].sort());
 });
