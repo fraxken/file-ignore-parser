@@ -6,7 +6,7 @@
 Parse ignore files (.gitignore and .npmignore)
 
 ## Requirements
-- Node.js v10 or higher
+- [Node.js](https://nodejs.org/en/) v10 or higher
 
 ## Getting Started
 
@@ -24,6 +24,8 @@ const parser = require("file-ignore-parser");
 
 parser(".gitignore").then(console.log).catch(console.error);
 ```
+
+> If you want an Array you can convert the Set with Array.from()
 
 ## API
 
