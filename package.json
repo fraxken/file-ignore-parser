@@ -1,6 +1,6 @@
 {
     "name": "file-ignore-parser",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Parse ignore files (.gitignore and .npmignore)",
     "main": "index.js",
     "scripts": {
@@ -14,8 +14,14 @@
         "type": "git",
         "url": "git+https://github.com/fraxken/file-ignore-parser.git"
     },
-    "keywords": [],
-    "author": "SlimIO",
+    "keywords": [
+        "file",
+        "ignore",
+        "parser",
+        "npmignore",
+        "gitignore"
+    ],
+    "author": "GENTILHOMME Thomas <gentilhomme.thomas@gmail.com>",
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/fraxken/file-ignore-parser/issues"
